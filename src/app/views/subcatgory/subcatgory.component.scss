@@ -1,0 +1,52 @@
+.category-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arrow-back-field {
+  cursor: pointer;
+}
+
+.title-field {
+  font-size: 24px;
+}
+
+hr {
+  height: 1px;
+  color: #005caa;
+  background: #005caa;
+  font-size: 0;
+  border: 0;
+}
+
+.subcategory-section {
+  margin: 12px 0;
+
+  .subcategory-title {
+    font-size: 20px;
+  }
+}
+
+.no-product- {
+  &section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px;
+    flex-direction: column;
+  }
+
+  &title {
+    font-size: 24px;
+  }
+
+  &button {
+    border-radius: 24px;
+    background: #005caa;
+    padding: 12px;
+    color: white;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+}

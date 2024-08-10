@@ -1,0 +1,218 @@
+.body{
+  width: 100%;
+  height: 100%;  
+  background: #ffffff;
+}
+.main-navbar{
+    border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar{
+    background-color: #F7F8F8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name{
+    color: #101820;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.brand-link {
+  text-decoration: none; 
+}
+
+.brand-link:hover,
+.brand-link:focus {
+  text-decoration: none; 
+  outline: none; 
+}
+
+.text-login{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-navbar .top-navbar .nav-link{
+    color: #101820;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu{
+    padding: 0px 0px;
+    border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+    width: 20px;
+    text-align: center;
+    color: #2874f0;
+    font-size: 14px;
+}
+.main-navbar .navbar{
+    padding: 0px;
+    background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link{
+    padding: 8px 20px;
+    color: #000;
+    font-size: 15px;
+}
+
+.navbar-nav {
+  margin-left: 10rem;
+  margin-right: auto;
+  text-align: center;
+}
+.dropdown-menu {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+.small-description {
+  font-size: 13px;
+}
+
+.text-decoration-none a.nav-link span {
+  text-decoration: underline; 
+}
+
+.text-decoration-none a.nav-link:hover span {
+  text-decoration: none; 
+}
+
+.text-upload{
+  font-size: 18px;
+}
+
+.text-upload {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #333; /* warna teks Upload Foto */
+    }
+
+    .text-deskrisaun {
+      font-size: 0.8rem;
+      color: #999; /* warna teks catatan */
+    }
+
+    @media (max-width: 576px) {
+      /* CSS untuk tampilan responsif ketika lebar layar kurang dari 576px */
+      .note-text {
+        margin-left: 0; /* menghilangkan jarak antara dua teks */
+        margin-top: 5px; /* memberikan jarak di atas teks catatan */
+        display: block; /* Mengatur agar teks catatan berada di bawah teks "Upload Foto" */
+      }
+    }
+
+.btn.btn-outline-primary {
+  background-color: #ffffff; 
+    color: #002f34; 
+    height: 46px;
+    border-top: 5px solid #0087C7; 
+    border-right: 5px solid #06883B; 
+    border-bottom: 5px solid #E68801; 
+    border-left: 5px solid #0087C7; 
+    border-top-left-radius: 50px; 
+    border-top-right-radius: 50px; 
+    border-bottom-left-radius: 50px; 
+    border-bottom-right-radius: 50px; 
+    display: inline-flex; 
+    align-items: center; 
+    padding: 10px 20px;
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: #ffffff; 
+  color: #ffffff; 
+}
+
+
+
+/* End Carousel */
+/* Gaya untuk Kontainer Produk */
+.container {
+  padding: 20px;
+}
+
+/* Gaya untuk Kartu Produk */
+.product-card {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden; 
+}
+
+/* Gaya untuk Gambar Produk */
+
+
+h3.h3{text-align:left;margin:1em;text-transform:capitalize;font-size:1.7em;}
+
+
+/*footer*/
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+.footer {
+    position: absolute; 
+}
+
+.footer-image {
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+    bottom: 100%; 
+    transform: translateY(-100%);
+}
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#B7B7B7; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#fff; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#fff;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}

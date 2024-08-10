@@ -1,0 +1,42 @@
+<!-- Cards Two -->
+<div class="container-sm">
+  <h3 class="h3">Rekomenda Foun...</h3>
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="row">
+      <div *ngFor="let product of products" class="col-md-3 col-sm-6">
+        <a
+          [routerLink]="['/item-detail']"
+          [queryParams]="{ id: product.id }"
+          class="product-link"
+          (click)="gotoDetailProduct(product)"
+        >
+          <div class="product-card">
+            <div class="product-image">
+              <img [src]="product.imagem" alt="Product Image" />
+            </div>
+            <div class="product-content">
+              <h3 class="price">{{ product.presu }}</h3>
+              <span class="title">{{ product.titlu }}</span>
+              <div class="date-location">
+                <i
+                  class="fa fa-map-marker"
+                  aria-hidden="true"
+                  title="Location"
+                ></i>
+                <span class="location-text">{{ product.munisipiu.naran }}</span>
+              </div>
+              <p class="date">{{ product.datapublika }}</p>
+              <p class="description">{{ product.deskrisaun }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- ... -->
+</div>
+<div class="load-more">
+  <button class="btn-moreitem">Haree liu tan</button>
+  <!-- Text "Load More Item" -->
+</div>

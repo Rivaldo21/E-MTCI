@@ -1,0 +1,44 @@
+body{
+    background:#ffffff;
+}
+.forget-pwd > a{
+    color: #295df8;
+    font-weight: 500;
+}
+.forget-password .panel-default{
+    padding: 31%;
+    margin-top: -27%;
+}
+.forget-password .panel-body{
+    padding: 15%;
+    margin-bottom: -50%;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img{
+    width:40%;
+    margin-bottom:10%;
+}
+
+.btnForget{
+    background: #295df8;
+    border:none;
+}
+
+.btn-block{
+    background: #295df8;
+    border: 100px;
+}
+
+.forget-password .dropdown{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.forget-password .dropdown button{
+    width: 100%;
+}
+.forget-password .dropdown ul{
+    width: 100%;
+}

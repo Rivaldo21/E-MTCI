@@ -1,0 +1,404 @@
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #000; 
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+}
+
+.category-container{
+   justify-content: center; 
+}
+
+.h3{
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .card-custom {
+        margin-bottom: 20px; /* Adds more space between cards on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .card-title {
+        font-size: 1.25rem; /* Reduces the font size on medium screens */
+    }
+}
+
+
+.card-custom {
+    overflow: hidden;
+    min-height: 300px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    display: flexbox;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+ .button-style {
+    background-color: transparent; 
+    color: transparent; 
+    border: none; 
+    padding: 5px 5px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    display: inline-block; 
+}
+
+.text-style {
+    font-size: 14px; 
+    font-weight: bold; 
+} 
+
+p {
+    font-size: 16px;
+    display: flexbox;
+    
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-link:hover .product-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+  
+.card-custom {
+    overflow: hidden;
+    min-height: 450px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  }
+  
+  .card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+  }
+  
+  .card-custom-img::after {
+    position: absolute;
+    content: '';
+    top: 161px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+  }
+  
+  .card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    position: absolute;
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-text-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 150px;
+  }
+
+  .card-footer {
+    background: inherit;
+    border-color: inherit;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-footer a {
+    margin: 0 2px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+.h3{
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 394px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    width: 240px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #f2ecf7;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.2);
+}
+
+.product-content {
+    padding: 15px;
+    margin-top: 10px; 
+    background-color: #fff;
+}
+
+.title{
+    font-size: 17px;
+}
+
+.description{
+    font-size: 15px;
+}
+
+.date {
+    font-size: 15px;
+    text-align: left;
+  }  
+
+.date-location {
+    font-size: 12px;
+    display: block;
+    align-items: center;
+}
+
+.date-location .date {
+    margin-right: 10px;
+}
+
+.date-location .fa-map-marker {
+    margin-right: 5px;
+    color: #007bff; 
+}
+
+.location-text {
+    font-size: 14px;
+    color: #333; 
+}
+
+.custom-font-size {
+    font-size: 14px; 
+}
+.icon-style {
+    font-size: 17px;
+    color: #a8a8a8; 
+    vertical-align: middle; 
+}
+.text-style {
+    font-size: 13px; 
+    color: #a8a8a8; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+.btn-outline-primary {
+    border: 2px solid #0087C7; /* Border color */
+    color: #E68801; /* Text color */
+    background-color: #ffffff; /* Background color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border-radius: 4px; /* Border radius */
+    margin-left: 30px;
+    display: inline-flex; /* Display as inline-flex */
+    align-items: center; /* Align items vertically */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+}
+.btn-outline-primary:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #0f7c40; /* Text color on hover */
+}
+.btn-outline-primary .fa {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.carousel-container {
+    width: 77%; /* Atur lebar kontainer carousel */
+    margin: 20px auto; /* Pusatkan carousel dengan margin atas-bawah */
+}
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    border-radius: 10px; /* Tambahkan border radius 10px pada semua elemen terkait carousel */
+}
+.carousel-inner img {
+    width: 100%;
+    height: 300px; /* Mengatur tinggi gambar */
+    object-fit: cover; /* Memastikan gambar menutupi seluruh area tanpa terdistorsi */
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px; /* Tambahkan border radius pada caption */
+}
+
+// kategoria
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.category-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.category-icon img {
+    width: 50px; /* Perbesar lebar gambar ikon */
+    height: 50px; /* Perbesar tinggi gambar ikon */
+}
+
+.category-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-indicators li {
+    background-color: #ccc;
+    width: 60px; /* Lebar indikator */
+    height: 10px; /* Tinggi indikator */
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    border-radius: 10px; /* Border-radius pada indikator */
+}
+.carousel-indicators .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #18eb05;
+    animation: progress 5s linear; /* Durasi animasi sesuai dengan interval slide */
+    border-radius: 10px; /* Border-radius pada animasi */
+}
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    text-shadow: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    z-index: 1;
+}
+.carousel-control-prev {
+    left: -20px; 
+}
+.carousel-control-next {
+    right: -20px; 
+}
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 3rem; 
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.load-more {
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 50px;
+  }
+  
+  .load-more button {
+    background-color: #ffffff; 
+    color: #0087C7; 
+    border: 2px solid #0087C7; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .load-more button:hover {
+    background-color: #0087C7; 
+    color: #fff; 
+    border-color: #E68801; 
+  }
+
+  .btn-primary{
+    background-color: #E68801;
+  }

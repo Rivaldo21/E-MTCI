@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Tama</h5>
+          <form class="form-signin" (ngSubmit)="onLogin()">
+            <div class="form-label-group">
+              <input type="text" id="inputEmail" class="form-control" placeholder="Naran" required autofocus [(ngModel)]="username" name="username">
+              <label for="inputEmail"></label>
+            </div>
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required [(ngModel)]="password" name="password">
+              <label for="inputPassword"></label>
+            </div>
+            <div class="form-check mb-3 d-flex align-items-center">
+              <label class="form-check-label ml-auto" for="rememberPasswordCheck">
+                <a href="/forgotpss">Haluha Password?</a>
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+            <hr class="my-4">
+            <p class="text-center mt-3">Seidauk rejistu? <a routerLink="/rejistu">Rejistu Agora</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

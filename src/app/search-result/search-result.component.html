@@ -1,0 +1,407 @@
+<!-- sidebar + content -->
+  <section class="">
+    <div class="container">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-lg-3">
+          <!-- Toggle button -->
+          <button
+                  class="btn btn-outline-secondary mb-3 w-100 d-lg-none"
+                  type="button"
+                  data-mdb-toggle="collapse"
+                  data-mdb-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >
+            <span>Show filter</span>
+          </button>
+          <!-- Collapsible wrapper -->
+          <div class="collapse card d-lg-block mb-5" id="navbarSupportedContent">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                          class="accordion-button text-dark bg-light"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#panelsStayOpen-collapseOne"
+                          aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseOne"
+                          >
+                    Kategoria
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="text-dark">Electronics </a></li>
+                      <li><a href="#" class="text-dark">Home items </a></li>
+                      <li><a href="#" class="text-dark">Books, Magazines </a></li>
+                      <li><a href="#" class="text-dark">Men's clothing </a></li>
+                      <li><a href="#" class="text-dark">Interiors items </a></li>
+                      <li><a href="#" class="text-dark">Underwears </a></li>
+                      <li><a href="#" class="text-dark">Shoes for men </a></li>
+                      <li><a href="#" class="text-dark">Accessories </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button text-dark bg-light"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseTwo"
+                    >
+                    Munisipiu
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                  <div class="accordion-body">
+                    <div>
+                      <!-- Checked checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked />
+                        <label class="form-check-label" for="flexCheckChecked1">Lautém</label>
+                        <span class="badge badge-secondary float-end">120</span>
+                      </div>
+                      <!-- Checked checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked />
+                        <label class="form-check-label" for="flexCheckChecked2">Dili</label>
+                        <span class="badge badge-secondary float-end">15</span>
+                      </div>
+                      <!-- Checked checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3" checked />
+                        <label class="form-check-label" for="flexCheckChecked3">Baucau</label>
+                        <span class="badge badge-secondary float-end">35</span>
+                      </div>
+                      <!-- Checked checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4" checked />
+                        <label class="form-check-label" for="flexCheckChecked4">Ermera</label>
+                        <span class="badge badge-secondary float-end">89</span>
+                      </div>
+                      <!-- Default checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Manatuto</label>
+                        <span class="badge badge-secondary float-end">30</span>
+                      </div>
+                      <!-- Default checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Liquica</label>
+                        <span class="badge badge-secondary float-end">30</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button text-dark bg-light"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree"
+                    >
+                    Presu
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                  <div class="accordion-body">
+                    <div class="range">
+                      <input type="range" class="form-range" id="customRange1" />
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <p class="mb-0">
+                          Min
+                        </p>
+                        <div class="form-outline">
+                          <input type="number" id="typeNumber" class="form-control" />
+                          <label class="form-label" for="typeNumber">$0</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <p class="mb-0">
+                          Max
+                        </p>
+                        <div class="form-outline">
+                          <input type="number" id="typeNumber" class="form-control" />
+                          <label class="form-label" for="typeNumber">$1,0000</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-white w-100 border border-secondary">Aplika</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+               <!-- Left Panel -->
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                  <!-- Left Panel -->
+                </div>
+              </div>
+              <div class="accordion-item">
+                <!-- Left Panel -->
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                  <div class="accordion-body">
+                    <!-- Left Panel -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar -->
+        <!-- content -->
+        <div class="col-lg-9">
+          <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
+            <strong class="d-block py-2">32 Produtu </strong>
+            <div class="ms-auto">
+              <select class="form-select d-inline-block w-auto border pt-1">
+                <option value="0">Best match</option>
+                <option value="1">Recommended</option>
+                <option value="2">High rated</option>
+                <option value="3">Randomly</option>
+              </select>
+              <div class="btn-group shadow-0 border">
+                <a href="#" class="btn btn-light" title="List view">
+                  <i class="fa fa-bars fa-lg"></i>
+                </a>
+                <a href="#" class="btn btn-light active" title="Grid view">
+                  <i class="fa fa-th fa-lg"></i>
+                </a>
+              </div>
+            </div>
+          </header>
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-12">
+              <div class="card shadow-0 border rounded-3">
+                <div class="card-body">
+                  <div class="row g-0">
+                    <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                      <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                        <img src="https://apollo.olx.co.id/v1/files/6594289826b-ID/image;s=780x0;q=60" class="w-100" />
+                        <a href="#!">
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5 col-sm-7">
+                        <h5>Jeans Shorts Men's Denim</h5>
+                        <h6 class="text-success">Cristo Rei, Bidau</h6>
+                        <p class="text mb-4 mb-md-0">
+                          Re-engineered Digital Crown with hapti Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tempor incididunt ut
+                          labore et dolore magna
+                        </p>
+                      </div>
+                      <div class="col-xl-3 col-md-3 col-sm-5">
+                        <div class="d-flex flex-row align-items-center mb-1">
+                          <h4 class="mb-1 me-1">$34,50</h4>
+                        </div>
+                        <div class="mt-4">
+                          <button class="btn btn-outline-primary" (click)="navigateToCompanyProfile()">
+                              <img src="/assets/img/building-store.svg" alt="Building Icon" class="icon-img"> Loja
+                          </button> 
+                        </div>
+                      </div>                                                       
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-12">
+              <div class="card shadow-0 border rounded-3">
+                <div class="card-body">
+                  <div class="row g-0">
+                    <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                      <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                        <img src="https://apollo.olx.co.id/v1/files/665ff87a62cc3-ID/image;s=780x0;q=60" class="w-100" />
+                        <a href="#!">
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5 col-sm-7">
+                      <h5>Men's Denim Jeans Shorts</h5>
+                      <h6 class="text-success">Vera Cruz, Colmera</h6>
+                      <p class="text mb-4 mb-md-0">
+                        Re-engineered Digital Crown with hapti Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tempor incididunt ut
+                        labore et dolore magna
+                      </p>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-sm-5">
+                      <div class="d-flex flex-row align-items-center mb-1">
+                        <h4 class="mb-1 me-1">$34,50</h4>
+                      </div>
+                      <div class="mt-4">
+                        <button class="btn btn-outline-primary" (click)="navigateToCompanyProfile()">
+                            <img src="/assets/img/building-store.svg" alt="Building Icon" class="icon-img"> Loja
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-12">
+              <div class="card shadow-0 border rounded-3">
+                <div class="card-body">
+                  <div class="row g-0">
+                    <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                      <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                        <img src="https://apollo.olx.co.id/v1/files/nyppaujvpma7-ID/image;s=780x0;q=60" class="w-100" />
+                        <a href="#!">
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5 col-sm-7">
+                      <h5>T-shirt for Men Blue Cotton Base</h5>
+                      <h6 class="text-success">Vera Cruz, Colmera</h6>
+                      <p class="text mb-4 mb-md-0">
+                        Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text
+                        consectetur adipisicing
+                      </p>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-sm-5">
+                      <div class="d-flex flex-row align-items-center mb-1">
+                        <h4 class="mb-1 me-1">$99,50</h4>
+                      </div>
+                      <div class="mt-4">
+                        <button class="btn btn-outline-primary" (click)="navigateToCompanyProfile()">
+                            <img src="/assets/img/building-store.svg" alt="Building Icon" class="icon-img"> Loja
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-12">
+              <div class="card shadow-0 border rounded-3">
+                <div class="card-body">
+                  <div class="row g-0">
+                    <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                      <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                        <img src="https://apollo.olx.co.id/v1/files/6602172da9847-ID/image;s=780x0;q=60" class="w-100" />
+                        <a href="#!">
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5 col-sm-7">
+                      <h5>Winter Jacket for Men and Women</h5>
+                      <h6 class="text-success">Cristo Rei,Bidau</h6>
+                      <p class="text mb-4 mb-md-0">
+                        Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text
+                      </p>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-sm-5">
+                      <div class="d-flex flex-row align-items-center mb-1">
+                        <h4 class="mb-1 me-1">$140</h4>
+                      </div>
+                      <div class="mt-4">
+                        <button class="btn btn-outline-primary" (click)="navigateToCompanyProfile()">
+                            <img src="/assets/img/building-store.svg" alt="Building Icon" class="icon-img"> Loja
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-12">
+              <div class="card shadow-0 border rounded-3">
+                <div class="card-body">
+                  <div class="row g-0">
+                    <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                      <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                        <img src="https://apollo.olx.co.id/v1/files/6645b702efc32-ID/image;s=780x0;q=60" class="w-100" />
+                        <a href="#!">
+                          <div class="hover-overlay">
+                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5 col-sm-7">
+                      <h5>T-shirt for Men Blue Cotton Base</h5>
+                      <h6 class="text-success">Dom Aleixo, Delta Comoro</h6>
+                      <p class="text mb-4 mb-md-0">
+                        Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text
+                      </p>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-sm-5">
+                      <div class="d-flex flex-row align-items-center mb-1">
+                        <h4 class="mb-1 me-1">$99.50</h4>
+                      </div>
+                      <div class="mt-4">
+                        <button class="btn btn-outline-primary" (click)="navigateToCompanyProfile()">
+                            <img src="/assets/img/building-store.svg" alt="Building Icon" class="icon-img"> Loja
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <hr />
+  
+          <!-- Pagination -->
+          <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Pagination -->
+        </div>
+    </div>
+</div>
+  

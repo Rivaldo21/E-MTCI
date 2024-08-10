@@ -1,0 +1,126 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <h5 class="card-header">Inklui Detalle Ruma</h5>
+        <div class="card-body">
+          <!-- File Upload -->
+          <div class="form-group">
+            <label for="fotoUpload">
+              <span class="text-upload">Imagen</span>
+              <span class="text-deskrisaun">(Imagen 1. to 5. formatu: jpg, jpeg)</span>
+            </label>
+            <input type="file" multiple class="form-control-file" id="fotoUpload" accept="image/jpeg, image/jpg" (change)="onFileSelected($event)" style="display: none;" />
+            
+            <div class="image-upload-container">
+              <div class="image-box" *ngFor="let image of images; let i = index" (click)="onImageBoxClick(i)">
+                <ng-container *ngIf="!image">
+                  <span class="fa fa-plus-circle add"></span>
+                </ng-container>
+                <ng-container *ngIf="image">
+                  <img [src]="image" alt="Uploaded Image" />
+                </ng-container>
+              </div>
+            </div>
+          </div>                                     
+
+          <!-- Title Input -->
+          <div class="form-group">
+            <label for="judulItem">
+              <span class="text-upload">Titlu Publisidade </span>
+              <span class="text-deskrisaun">(husi 5 to karakter 70)</span>
+            </label>
+            <input type="text" class="form-control" id="judulItem" [(ngModel)]="formData.titlu" minlength="5" maxlength="70" required />
+          </div>
+
+          <!-- Location -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="location">
+                  <span class="text-upload">Munisipiu</span>
+                  <span class="text-deskrisaun">(Hili ita-nia munisipiu)</span>
+                </label>
+                <select class="form-control" id="location" [(ngModel)]="formData.munisipiu" (change)="onLocationChange($event)" (scroll)="onLocationScroll($event)" required>
+                  <option value="">Hili Munisipiu</option>
+                  <option *ngFor="let location of locations" [value]="location.id">{{ location.naran }}</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Posto Administrativu -->
+            <div class="col-md-6" *ngIf="showPostoadministrativu">
+              <div class="form-group">
+                <label for="sublocation">
+                  <span class="text-upload">Posto Administrativu</span>
+                  <span class="text-deskrisaun"></span>
+                </label>
+                <select class="form-control" id="sublocation" [(ngModel)]="formData.postoAdministrativu" (scroll)="onPostoScroll($event)">
+                  <option *ngFor="let postu of filterMunisipiu" [value]="postu.id">{{ postu.naran }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category -->
+          <div class="form-group">
+            <label for="kategori">
+              <span class="text-upload">Kategoria</span>
+              <span class="text-deskrisaun">(Hili kategoria tuir ita-nia produtu)</span>
+            </label>
+            <select class="form-control" id="kategori" [(ngModel)]="formData.kategoria" (change)="onKategoriChange($event)" required>
+              <option value="">Hili Kategoria</option>
+              <option *ngFor="let kategori of categories" [value]="kategori.id">{{ kategori.naran }}</option>
+            </select>
+          </div>
+
+          <!-- Subcategory -->
+          <div class="form-group" *ngIf="showSubkategori">
+            <label for="subkategori">
+              <span class="text-upload">Subkategoria</span>
+              <span class="text-deskrisaun">(Hili subkategoria tuir kategoria produtu)</span>
+            </label>
+            <select class="form-control" id="subkategori" [(ngModel)]="formData.subkategoria">
+              <option *ngFor="let subkategori of filterSubCategory" [value]="subkategori.id">{{ subkategori.naran }}</option>
+            </select>
+          </div>
+
+          <span class="text-upload">Presu</span>
+          <span class="text-deskrisaun">(Presu labele ki'ik liu 0)</span>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">$</span>
+            </div>
+            <input type="text" hidden name="currency" value="3" />
+            <input type="number" id="price" min="0.01" class="form-control" [(ngModel)]="formData.price" required />
+          </div>
+
+          <div class="form-group">
+            <label for="deskripsi">
+              <span class="text-upload">Deskrisaun Produtu</span>
+              <span class="text-deskrisaun">(husi 10 to 500 karakter)</span>
+            </label>
+            <textarea class="form-control" id="deskripsi" rows="5" [(ngModel)]="formData.deskrisaun" minlength="10" maxlength="500" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="nomorHanphone">
+              <span class="text-upload">Numeru Telemovel</span>
+              <span class="text-deskrisaun">(exmplu:+670 74192621)</span>
+            </label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i id="flag" class="iti__flag iti__tl"></i>
+                </span>
+              </div>
+              <input type="tel" class="form-control" id="nomorHanphone" [(ngModel)]="formData.telemovel" placeholder="+670" required />
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block" (click)="postDataToAPI()">Aumenta Publisidade</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

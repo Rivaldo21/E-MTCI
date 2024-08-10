@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/companypfe",
+    "/forgotpss",
+    "/item-detail",
+    "/login",
+    "/publisidade",
+    "/rejistu"
+  ]
+}

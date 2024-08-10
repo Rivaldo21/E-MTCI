@@ -1,0 +1,38 @@
+.icon-hover:hover {
+    border-color: #3b71ca !important;
+    background-color: white !important;
+    color: #3b71ca !important;
+  }
+  
+  .icon-hover:hover i {
+    color: #3b71ca !important;
+  }
+
+  .btn-spacing {
+    margin-right: 10px; /* Sesuaikan ukuran margin sesuai kebutuhan */
+}
+
+.date {
+    font-size: 15px;
+    text-align: left;
+  }  
+
+.date-location {
+    font-size: 12px;
+    display: block;
+    align-items: center;
+}
+
+.date-location .date {
+    margin-right: 10px;
+}
+
+.date-location .fa-map-marker {
+    margin-right: 5px;
+    color: #007bff; 
+}
+
+.location-text {
+    font-size: 14px;
+    color: #333; 
+}

@@ -1,0 +1,18 @@
+.chip- {
+  &container {
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #005caa;
+    padding: 12px;
+    min-width: 80px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  &text {
+    font-size: 14px;
+    color: white;
+  }
+}

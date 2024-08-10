@@ -1,0 +1,358 @@
+<!-- Carousel -->
+<div class="container-sm">
+  <div class="container">
+    <div id="smallCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#smallCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#smallCarousel" data-slide-to="1"></li>
+        <li data-target="#smallCarousel" data-slide-to="2"></li>
+      </ul>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://assets-portal-cms.olx.com.br/807x376_Ajuda_Rio_Grandedo_Sul_d93c3d5516.webp"
+            alt="Slide 1"
+          />
+          <!-- <div class="carousel-caption">
+                    <h3>Slide 1</h3>
+                    <p>Deskripsi untuk Slide 1.</p>
+                </div> -->
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://assets-portal-cms.olx.com.br/807x376_BAIXOU_O_PRECO_dc38b8f06c.webp"
+            alt="Slide 2"
+          />
+          <!-- <div class="carousel-caption">
+                    <h3>Slide 2</h3>
+                    <p>Deskripsi untuk Slide 2.</p>
+                </div> -->
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://assets-portal-cms.olx.com.br/807x376_Home_1e589e1593.webp"
+            alt="Slide 3"
+          />
+          <!-- <div class="carousel-caption">
+                    <h3>Slide ukuruan 800x300</h3> 
+                    <p>Deskripsi untuk Slide 3.</p>
+                </div> -->
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a
+        class="carousel-control-prev"
+        href="#smallCarousel"
+        role="button"
+        data-slide="prev"
+      >
+        <i class="fas fa-chevron-circle-left"></i>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#smallCarousel"
+        role="button"
+        data-slide="next"
+      >
+        <i class="fas fa-chevron-circle-right"></i>
+      </a>
+    </div>
+  </div>
+  <!-- End Carousel -->
+
+  <!-- Tambah Kategori di bawah carousel -->
+  <div class="category-container">
+    <div class="category-item" (click)="showHideCategory(1)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/3000.667765cf.png"
+          alt="Icon 1"
+        />
+      </div>
+      <div class="category-text">Food & Farming</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(2)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/5000.e017683d.png"
+          alt="Icon 2"
+        />
+      </div>
+      <div class="category-text">Medical & Consultation</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(3)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/2000.ac2770f0.png"
+          alt="Icon 3"
+        />
+      </div>
+      <div class="category-text">Electronics</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(4)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/1000.e6991dbf.png"
+          alt="Icon 4"
+        />
+      </div>
+      <div class="category-text">Construction & Equipment</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(5)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/20000.cb38038a.png"
+          alt="Icon 5"
+        />
+      </div>
+      <div class="category-text">Pharmaceutical</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(6)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/21000.c7caef54.png"
+          alt="Icon 6"
+        />
+      </div>
+      <div class="category-text">Goods & Supplies</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(7)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/6000.bc88ebe2.png"
+          alt="Icon 7"
+        />
+      </div>
+      <div class="category-text">Building Construction</div>
+    </div>
+    <div class="category-item" (click)="showHideCategory(8)">
+      <div class="category-icon">
+        <img
+          src="https://home.olx.com.br/_next/static/media/12000.8ea8c191.png"
+          alt="Icon 8"
+        />
+      </div>
+      <div class="category-text">Material Equipment</div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- <div class="container-sm">
+      <h3 class="h3 section-title">Rekomenda Loja</h3>
+      <div class="row pt-3 m-auto"> -->
+        <!-- Card 1 -->
+        <!-- <div class="col-sm-12 col-md-6 col-lg-3 pb-3">
+          <div class="card card-custom bg-white border-white border-0">
+            <div
+              class="card-custom-img"
+              style="
+                background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);
+              "
+            ></div>
+            <div class="card-custom-avatar">
+              <img
+                class="img-fluid"
+                src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h4 class="card-title">ShopX</h4>
+              <p class="card-text">
+                ShopX offers a variety of products from electronics to fashion
+                with fast service and competitive prices necessities to the
+                latest.
+              </p>
+            </div>
+            <div
+              class="card-footer"
+              style="background: inherit; border-color: inherit"
+            >
+              <button class="button-style">
+                <i
+                  class="fas fa-cube icon-style"
+                  aria-hidden="true"
+                  title="Total Views"
+                ></i>
+                <span class="text-style">1728</span>
+              </button>
+              <button
+                class="btn btn-outline-primary"
+                (click)="navigateToCompanyProfile()"
+              >
+                <img
+                  src="/assets/img/building-store.svg"
+                  alt="Building Icon"
+                  class="icon-img"
+                />
+                Loja
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Card 2 -->
+        <!-- <div class="col-md-6 col-lg-3 pb-3">
+          <div class="card card-custom bg-white border-white border-0">
+            <div
+              class="card-custom-img"
+              style="
+                background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);
+              "
+            ></div>
+            <div class="card-custom-avatar">
+              <img
+                class="img-fluid"
+                src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h4 class="card-title">SwiftMart</h4>
+              <p class="card-text">
+                SwiftMart is your one-stop shop with a comprehensive collection
+                of products, from daily necessities electronics.
+              </p>
+            </div>
+            <div
+              class="card-footer"
+              style="background: inherit; border-color: inherit"
+            >
+              <button class="button-style">
+                <i
+                  class="fas fa-cube icon-style"
+                  aria-hidden="true"
+                  title="Total Views"
+                ></i>
+                <span class="text-style">1728</span>
+              </button>
+              <button
+                class="btn btn-outline-primary"
+                (click)="navigateToCompanyProfile()"
+              >
+                <img
+                  src="/assets/img/building-store.svg"
+                  alt="Building Icon"
+                  class="icon-img"
+                />
+                Loja
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Card 3 -->
+        <!-- <div class="col-md-6 col-lg-3 pb-3">
+          <div class="card card-custom bg-white border-white border-0">
+            <div
+              class="card-custom-img"
+              style="
+                background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);
+              "
+            ></div>
+            <div class="card-custom-avatar">
+              <img
+                class="img-fluid"
+                src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h4 class="card-title">QuickShop</h4>
+              <p class="card-text">
+                QuickShop is a convenient shopping destination with quality
+                products and friendly service to meet your everyday needs.
+              </p>
+            </div>
+            <div
+              class="card-footer"
+              style="background: inherit; border-color: inherit"
+            >
+              <button class="button-style">
+                <i
+                  class="fas fa-cube icon-style"
+                  aria-hidden="true"
+                  title="Total Views"
+                ></i>
+                <span class="text-style">1728</span>
+              </button>
+              <button
+                class="btn btn-outline-primary"
+                (click)="navigateToCompanyProfile()"
+              >
+                <img
+                  src="/assets/img/building-store.svg"
+                  alt="Building Icon"
+                  class="icon-img"
+                />
+                Loja
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pb-3"> -->
+          <!-- <div class="card card-custom bg-white border-white border-0">
+            <div
+              class="card-custom-img"
+              style="
+                background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);
+              "
+            ></div>
+            <div class="card-custom-avatar">
+              <img
+                class="img-fluid"
+                src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h4 class="card-title">EasyBuy</h4>
+              <p class="card-text">
+                EasyBuy provides an effortless shopping experience with the
+                latest products in fashion, beauty, and technology.
+              </p>
+            </div>
+            <div
+              class="card-footer"
+              style="background: inherit; border-color: inherit"
+            >
+              <button class="button-style">
+                <i
+                  class="fas fa-cube icon-style"
+                  aria-hidden="true"
+                  title="Total Views"
+                ></i>
+                <span class="text-style">1728</span>
+              </button>
+              <button
+                class="btn btn-outline-primary"
+                (click)="navigateToCompanyProfile()"
+              >
+                <img
+                  src="/assets/img/building-store.svg"
+                  alt="Building Icon"
+                  class="icon-img"
+                />
+                Loja
+              </button>
+            </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+
+
+  <app-product-card [products]="products"> </app-product-card>
+
+</div>
+
+<div style="position: relative">
+  <img
+    src="assets/img/ic_footer.png"
+    class="logo"
+    style="width: 100%; height: auto; display: block"
+  />
+</div>

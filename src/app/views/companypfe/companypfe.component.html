@@ -1,0 +1,256 @@
+<!-- companypfe.component.html -->
+<div class="container">
+  <div class="card overflow-hidden">
+    <div class="card-body p-0">
+      <img src="assets/img/bgprofile.svg" alt class="img-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-4 order-lg-1 order-2">
+          <div class="d-flex align-items-center justify-content-around m-4">
+            <div class="text-center">
+              <i class="fa fa-spinner fs-6 d-block mb-2"></i>
+              <h4 class="mb-0 fw-semibold lh-1">69</h4>
+              <p class="mb-0 fs-4">Pendente</p>
+            </div>
+            <div class="text-center">
+              <i class="fa fa-paper-plane fs-6 d-block mb-2"></i>
+              <h4 class="mb-0 fw-semibold lh-1">12</h4>
+              <p class="mb-0 fs-4">Fa'an Hela</p>
+            </div>
+            <div class="text-center">
+              <i class="fa fa-check fs-6 d-block mb-2"></i>
+              <h4 class="mb-0 fw-semibold lh-1">2</h4>
+              <p class="mb-0 fs-4">Fa'an Ona</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-n3 order-lg-2 order-1">
+          <div class="mt-n5">
+            <div class="d-flex align-items-center justify-content-center mb-2 position-relative">
+              <div class="linear-gradient d-flex align-items-center justify-content-center rounded-circle" style="width: 110px; height: 110px;">
+                <div class="border border-4 border-white d-flex align-items-center justify-content-center rounded-circle overflow-hidden position-relative" style="width: 100px; height: 100px;">
+                  <img [src]="profileImageSrc" alt class="w-100 h-100">
+                  <div class="overlay position-absolute d-flex align-items-center justify-content-center">
+                    <label for="profileImageUpload" class="camera-label mb-0">
+                      <i class="fa fa-camera text-white"></i>
+                    </label>
+                    <input type="file" id="profileImageUpload" accept="image/*" style="display: none;" (change)="onProfileImageChange($event)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h5 class="fs-5 mb-0 fw-semibold">{{ userName }}</h5>
+              <p class="mb-0 fs-4">{{ naranEmprezariu }}</p>
+              <p class="mb-0 fs-4">{{ telemovel }}</p>
+              <p class="mb-0 fs-4">{{ email }}</p>
+              <p class="mb-0 fs-4">{{ munisipiu }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 order-last">
+          <ul class="list-unstyled d-flex align-items-center justify-content-center justify-content-lg-start my-3 gap-3">
+            <li *ngIf="isLoggedIn">
+              <button class="btn btn-primary" (click)="openModal()">Edit Profile</button>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Informasaun Empreza</h5>
+                <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <!-- Name Form Group -->
+                  <div class="form-group">
+                    <label for="deskripsi"><span class="text-upload">Konaba Empreza</span> 
+                      <span class="text-deskrisaun">(husi 10 to 500 karakter)</span>
+                    </label>
+                    <textarea class="form-control" id="deskripsi" rows="5" minlength="10" maxlength="500"></textarea>
+                  </div>
+                  <!-- Phone Number Form Group -->
+                  <div class="form-group">
+                    <label for="phoneNumber">Numeru Telemovel</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i id="flag" class="iti__flag iti__tl"></i>
+                        </span>
+                      </div>
+                      <input type="tel" class="form-control" id="phoneNumber" placeholder="+670">
+                    </div>
+                  </div>
+                  <!-- Location Form Group -->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="location"><span class="text-upload">Munisipiu</span> <span class="text-deskrisaun">(Hili ita-nia munisipiu)</span></label>
+                        <select class="form-control" id="location" (change)="onLocationChange($event)">
+                          <option value="location">Hili Munisipiu</option>
+                          <option value="location1">Aileu</option>
+                          <option value="location2">Ainaru</option>
+                          <option value="location3">Baucau</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group" *ngIf="showPostoadministrativu">
+                        <label for="sublocation"><span class="text-upload">Posto Administrativu</span></label>
+                        <select class="form-control" id="sublocation" (change)="onSublocationChange($event)">
+                          <option *ngFor="let postoadministrativu of postoadministrativu" [value]="postoadministrativu.value">
+                            {{ postoadministrativu.text }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Payment Form Group -->
+                  <div class="form-group">
+                    <label for="payment">Suco & Aldeia</label>
+                    <input type="text" class="form-control" id="payment" placeholder="Ex.Bemori Aldeia 03">
+                  </div>
+                  <!-- Jam Operasional Form Group -->
+                  <div class="form-group">
+                    <label for="jamOperasional">Oras Servisu</label>
+                    <input type="text" class="form-control" id="jamOperasional" placeholder="Enter your operational hours">
+                  </div>
+                  <!-- Website Form Group -->
+                  <div class="form-group">
+                    <label for="website">Whatsapp</label>
+                    <input type="text" class="form-control" id="website" placeholder="Numeru Whatsapp">
+                  </div> 
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Taka</button>
+                <button type="button" class="btn btn-primary">Atualiza</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="nav custom-nav-pills justify-content-start mt-2" id="custom-pills-tab" role="tablist">
+          <li class="nav-item custom-nav-item" role="presentation">
+            <div class="company-profile d-flex">
+              <div class="company-info">
+                <div class="container-sm">
+                  <h4>Konaba Empreza</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet mollis magna. Morbi vitae interdum purus. Sed posuere sollicitudin justo, et condimentum quam rutrum nec. Nam venenatis odio sit amet tellus dictum, ac varius lacus tincidunt. Pellentesque fermentum nisl enim, in lacinia justo tempus iaculis. In ultricies dolor purus, in auctor felis luctus sit amet. Sed pretium, justo nec molestie sagittis, arcu diam blandit lacus, quis interdum nisi diam sit amet eros. Aenean viverra laoreet semper.</p>
+                </div>
+              </div>
+              <div class="vertical-line"></div>
+              <div class="contact-info">
+                <div class="info-item">
+                  <i class="fa fa-phone"></i>
+                  <div class="contact-details">
+                    <a href="https://plugins2.abprofitrade.eu/user/login" title="Phone Number">{{ telemovel }}</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fa fa-map-marker"></i>
+                  <div class="contact-details">
+                    {{ munisipiu }}
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fa fa-dollar"></i>
+                  <div class="contact-details">
+                    Cash, Cash on Delivery, Bank transfer
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fa fa-clock"></i>
+                  <div class="contact-details">
+                    <div><span>Mo:</span> <strong>09:00 - 18:00</strong></div>
+                    <div><span>Tu:</span> <strong>09:00 - 18:00</strong></div>
+                    <div><span>We:</span> <strong>nonstop</strong></div>
+                    <div><span>Th:</span> <strong>nonstop</strong></div>
+                    <div><span>Fr:</span> <strong>10:00 - 15:00</strong></div>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fa fa-link"></i>
+                  <div class="contact-details">
+                    <a href="https://web.whatsapp.com/" target="_blank">Whatsapp<i class="fa fa-angle-double-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab" tabindex="0">
+      <div class="d-sm-flex align-items-center justify-content-between mt-3 mb-4">
+        <h3 class="mb-3 mb-sm-0 fw-semibold d-flex align-items-center"><span class="text-produtu">Lista Produtu</span> <span class="badge text-bg-secondary fs-2 rounded-4 py-1 px-2 ms-2">12</span></h3>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="bpr-select bpr-category d-flex align-items-center">
+            <div class="form-group mb-0">
+              <select class="form-control" id="dropdownMenu">
+                <option value="">Hili Kategoria</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </div>
+          <form class="position-relative ms-3">
+            <input type="text" class="form-control search-chat py-2 ps-5" id="text-srh" placeholder="Buka Produtu">
+            <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y text-dark ms-3"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item Cards -->
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/assets/img/mugasilk01.jpeg" alt="Product Image">
+        </div>
+        <div class="product-content">
+          <h3 class="price">$99.00</h3>
+          <span class="title">Fan Uma</span>
+          <div class="date-location">
+            <i class="fa fa-map-marker" aria-hidden="true" title="Location"></i>
+            <span class="location-text">Dili, Dom Aleixo</span>
+          </div>
+          <p class="date">Maio 19, 2024</p>
+          <p class="description">This is a description of the product. It provides more details about the item.</p>
+          <div class="views">
+          </div>
+          <div class="card-actions" *ngIf="isLoggedIn && userId === cardOwnerId">
+            <button class="btn-transparent" title="Edit">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </button>
+            <button class="btn-transparent" title="Sold-out">
+              <i class="fa fa-handshake-o" aria-hidden="true"></i>
+            </button>
+            <button class="btn-transparent" title="View">
+              <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
+            <button class="btn-transparent" title="Delete">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Other cards... -->
+  </div>
+</div>

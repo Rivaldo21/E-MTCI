@@ -1,0 +1,49 @@
+<div class="container">
+  <ng-container
+    *ngIf="categorySelectedObj.length !== 0; else noCategoryProduct"
+  >
+    <!-- Title category and arrow back -->
+    <div class="category-section">
+      <div
+        class="fa fa-long-arrow-left arrow-back-field"
+        (click)="onBackClick()"
+      ></div>
+      <div class="title-field">
+        Kategoria {{ categorySelectedObj[0].kategoria.naran }}
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Sub category chip -->
+    <div class="subcategory-section">
+      <div class="subcategory-title">Hili Subkategoria :</div>
+    </div>
+
+    <div *ngFor="let subCategory of subCategoryFiltered">
+      <app-subcategory-chip
+        [title]="subCategory"
+        (subCategoryEmitter)="subCategoryHandler($event)"
+      ></app-subcategory-chip>
+    </div>
+
+    <!-- Product filtered based on category & subcategory -->
+    <ng-container *ngIf="showProduct">
+      <app-product-card
+        [products]="filterProductSubCategory"
+      ></app-product-card>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #noCategoryProduct>
+    <div class="no-product-section">
+      <div class="no-product-title">
+        Seidauk iha produtu.
+      </div>
+
+      <div class="no-product-button" (click)="onBackClick()">
+        Fila ba pagina antes
+      </div>
+    </div>
+  </ng-template>
+</div>

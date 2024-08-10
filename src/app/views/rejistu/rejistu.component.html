@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Rejistu</h5>
+          <form class="form-signin" #signUpForm="ngForm" (ngSubmit)="nextStep()">
+            <div class="form-label-group" *ngIf="step === 1">
+              <input type="text" id="inputName" class="form-control" placeholder="Naran" required autofocus [(ngModel)]="name" name="name">
+              <label for="inputName"></label>
+            </div>
+            <div class="form-label-group" *ngIf="step === 1">
+              <input type="text" id="inputBusinessName" class="form-control" placeholder="Naran Empreza" required [(ngModel)]="businessName" name="businessName">
+              <label for="inputBusinessName"></label>
+            </div>
+            <div class="form-label-group" *ngIf="step === 1">
+              <select id="inputMunicipality" class="form-control" required [(ngModel)]="municipalityId" name="municipality">
+                <option value="" disabled>Choose Munisipiu</option>
+                <option *ngFor="let location of locations" [value]="location.id">{{ location.naran }}</option>
+              </select>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" (click)="nextStep()" *ngIf="step === 1">Kontinua</button>
+            <div *ngIf="step === 2">
+              <div class="form-label-group">
+                <input type="tel" id="inputPhone" class="form-control" placeholder="Telemovel" required [(ngModel)]="phone" name="phone">
+                <label for="inputPhone"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email Empreza" required [(ngModel)]="email" name="email">
+                <label for="inputEmail"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required [(ngModel)]="password" name="password">
+                <label for="inputPassword"></label>
+              </div>
+              <div class="form-label-group">
+                <input type="file" id="inputImage" class="form-control" placeholder="Imagen" (change)="onFileSelected($event)">
+                <label for="inputImage"></label>
+              </div>
+              <button class="btn btn-lg btn-secondary btn-block text-uppercase" type="button" (click)="previousStep()">Fila</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Rejistu Agora</button>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mt-3">Rejistu ona? <a routerLink="/login">Tama Agora</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
